@@ -31,20 +31,48 @@
 }
 tr{
   border:2px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
 }
-td{
+
+
+@media (min-width:768px){
+  td{
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+}
+}
+@media (min-width:1024px){
+  td{
   padding-right: 3rem;
   padding-left: 2rem;
+}
+}
+
+@media (max-width:640px){
+  body{
+    width: fit-content;
+  }
+  body{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+}
+
+  td{
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
 }
 main ul li{
   list-style: disc;
 }
   </style>
 </head>
-<body>
+<body >
     <!-- ======= Header ======= -->
-  <header id="header" class="header sticky top-0" data-scrollto-offset="0">
+  <header id="header" class=" block header fixed top-0 border-black " data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
@@ -131,33 +159,32 @@ main ul li{
     </div>
   </header><!-- End Header -->
 
-
-  <main id="main " class="flex-col">
-  <!-- ======= Breadcrumbs ======= -->
-    <div class="text-sm text-gray-600 pl-10">
+  
+  <main id="main " class="flex-col justify-center">
+    <div class="text-sm text-gray-600 sm:pl-10 mt-20">
     ApplyMyform / JOBS / IAS
     </div>
+  <!-- ======= Breadcrumbs ======= -->
     
-    <div class="flex-col mt-10 mb-5 justify-center ">
-        <div class="text-2xl flex justify-center font-semibold">
-            Uttar Pradesh SWD UP IAS PCS Pre 2023 Free Coaching Admission Test Result</div>
+    <div class="flex mt-10 mb-2 md:mb-5 justify-center sm:mx-4 ">
+        <div class="sm: text-lg md:text-xl lg:text-2xl  font-semibold sm:ml-4">Uttar Pradesh SWD UP IAS PCS Pre 2023 Free Coaching Admission Test Result</div>
     </div>
-    <div class="flex  justify-center space-x-10">
+    <div class="flex  justify-center space-x-10 my-1 mb-2">
       <div class="w-48 mx-2" > Post Date:03 January 2023 </div>
       <div class="w-48 mx-2"> Time: 4:31 PM </div>
       
     </div>
     <div class="flex justify-center">
-    <div class="w-54 px-44 ">
+    <div class=" w-54 sm:px-20 md:px-44 ">
       <div class="text-xl font-semibold">About the Job:</div>
-      <div class="text-lg">Social Welfare Department, SWD Uttar Pradesh has released online application for admission in free coaching for the preparation of Civil Services and Public Service Commission Preliminary Examination 2023 for OBC, SC and ST candidates of Uttar Pradesh. Those Candidates Are Enrolled with Vacancy Can Download the Result. Read the notification for exam center information, seat information, syllabus and all other information.</div>
+      <div class="text-lg">Social Welfare Department SWD Uttar Pradesh has released online application for admission in free coaching for the preparation of Civil Services and Public Service Commission Preliminary Examination 2023 for OBC, SC and ST candidates of Uttar Pradesh. Those Candidates Are Enrolled with Vacancy Can Download the Result. Read the notification for exam center information, seat information, syllabus and all other information.</div>
     </div>
     </div>
     <div class=" my-4">
-    <div class=" px-44 ">
+    <div class=" sm:px-20 md:px-44 ">
       <div class="text-xl font-semibold underline">Important dates</div>
      
-      <table class="border-black border-2 w-48 my-4 text-lg">
+      <table class="border-black border-2 lg:w-48 my-4 text-lg">
         <tr>
           <td>Application Begin </td>
           <td><span class="font-semibold">10/11/2022</span></td>
@@ -187,7 +214,7 @@ main ul li{
     </div>
     </div>
     <div class="flex my-4">
-    <div class="w-54 px-44 ">
+    <div class="w-54 pl-5 sm:px-20 md:px-44  ">
       <div class="text-xl font-semibold underline">Application Fee</div>
        <ul class="text-lg">
         <li>No Application fees for Online Registration</li>
@@ -198,10 +225,10 @@ main ul li{
       
     </div>
     </div>
-    <div class=" px-44 ">
+    <div class=" sm:px-20 md:px-44  ">
       <div class="text-xl font-semibold underline">Navy SSC Executive Entry June 2023 (AT-23) Details</div>
      
-      <table class="border-black border-2  my-4  text-lg">
+      <table class="border-black border-2  my-4  md:text-lg ">
         <tr class="font-semibold ">
           <td class="border-2 border-black">Post Name </td>
           <td class="border-2 border-black">Total Post </td>
@@ -214,8 +241,8 @@ main ul li{
           <td class="border-2 border-black">02</td>
           <td class="border-2 border-black">Men & Women</td>
           <td class="border-2 border-black"><ul>
-            <li>-> Bachelor Degree in Law LLB with 55% Marks in Any Recognized University India.</li>
-            <li>-> Registration in Bar Council.</li>
+            <li>Bachelor Degree in Law LLB with 55% Marks in Any Recognized University India.</li>
+            <li>Registration in Bar Council.</li>
             <li><span class="font-semibold">Age Limit :</span> 02/07/1996 to 01/07/2001</li>
           </ul></td>
         </tr>
@@ -233,11 +260,11 @@ main ul li{
       </table>
       
     </div>
-    </div>
+    </main>
     <div class="flex my-4">
-      <div class="w-54 px-44 ">
+      <div class="w-54 pl-5 sm:px-20 md:px-44  ">
         <div class="text-xl font-semibold underline">How to Fill Indian Navy SSC Executive Law & Sports Online Form 2023</div>
-         <ul class="text-lg">
+         <ul class="text-lg list-disc">
           <li>Join Indian Navy Are Released for Executive Sports & Law Branch Entry Recruitment Indian Navy Vacancies. Candidate Can Apply Between 13/01/2023 to 28/01/2023.</li>
           <li>Join Indian Navy Are Released for Executive Sports & Law Branch Entry Recruitment Indian Navy Vacancies. Candidate Can Apply Between 13/01/2023 to 28/01/2023.</li>
           <li>Join Indian Navy Are Released for Executive Sports & Law Branch Entry Recruitment Indian Navy Vacancies. Candidate Can Apply Between 13/01/2023 to 28/01/2023.</li>
