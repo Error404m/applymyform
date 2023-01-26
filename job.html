@@ -16,7 +16,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,9 +27,195 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="assets/css/variables.css" rel="stylesheet"> 
+  <link href="assets/css/variables.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    table h1 {
+      display: block;
+      font-size: 28px;
+      color: #0F3063;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    table h5 {
+      display: block;
+      font-size: 15px;
+      color: #0F3063;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    td {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    li {
+      font-size: 21px;
+      margin-left: 10px;
+    }
+
+    .content-table {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      /* min-width: 400px; */
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+      align-items: center;
+      padding: 12px 15px;
+    }
+
+    .content-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .content-table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    .content-table tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+
+    .content-table tbody tr.active-row {
+      font-weight: bold;
+      color: #009879;
+    }
+  </style>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+
+  
+  /* The actual ttimeline (the vertical ruler) */
+  .ttimeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual ttimeline (the vertical ruler) */
+  .ttimeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    margin-left: -3px;
+    left: 31px;
+  
+  }
+  
+  /* tContainer around tcontent */
+  .tcontainer {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the ttimeline */
+  .tcontainer::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  
+  
+  /* Add arrows to the left tcontainer (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right tcontainer (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  
+  
+  /* The actual tcontent */
+  .tcontent {
+    padding: 5px 15px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    height:127px;
+  }
+  
+    
+    /* Full-width tcontainers */
+    .tcontainer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .tcontainer::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+  
+  
+  </style>
 </head>
 
 <body>
@@ -50,7 +238,8 @@
           <li><a class="nav-link scrollto" href="#tools">Tools</a></li>
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown megamenu"><a href="#"><span>Job Board</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown megamenu"><a href="#"><span>Job Board</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
                 <a href="#">Latest Jobs</a>
@@ -63,7 +252,7 @@
                 <a href="#">Admissions</a>
               </li>
               <li>
-                <a href="#">JPG to PDF</a>                
+                <a href="#">JPG to PDF</a>
                 <a href="#">Photo Size Reducer</a>
 
                 <a href="#">PDF Size Reducer</a>
@@ -75,6 +264,7 @@
               </li>
             </ul>
           </li>
+
           <li class="dropdown"><a href="#"><span>Others</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li class="dropdown"><a href="#">Aadhar Services <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -96,7 +286,7 @@
                   <li><a href="#">Income Tex website</a></li>
                 </ul>
               </li>
-              
+
               <li><a href="#">PM Kissan Section</a></li>
               <li><a href="#">Bhoomi</a></li>
               <li class="dropdown"><a href="#">Certificates <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -139,13 +329,13 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-   
+
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
         <div class="row g-5">
-            <!-- blocked for small devices-->
-          <div class="col-lg-2 	d-none d-lg-block"> 
+          <!-- blocked for small devices-->
+          <div class="col-lg-2 	d-none d-lg-block">
             <div class="sidebar">
               <div class="sidebar-item tags">
                 <h3 class="sidebar-title">Tags</h3>
@@ -163,137 +353,194 @@
                   <li><a href="#">Diploma</a></li>
                 </ul>
               </div><!-- End sidebar tags-->
-</div></div>
- 
-          <div class="col-lg-7">
+            </div>
+          </div>
 
-            <article class="blog-details">
+          <div class="col-lg-7" style="margin-top: 37px;">
+            <table border="1" cellspacing="0" cellpadding="0" class="content-table">
+              <tbody>
+                <tr>
+                  <td colspan="33">
+                    <h1 align="center"><b><span style="color: #008000;">UP BC Sakhi Yojana For 3808 Post</span></b></h1>
+                    <h5 align="center"><span style="color: #3279FC;"><b>Uttar Pradesh State Rural Livelihood Mission
+                          (UPSRLM)</b></span><b></b></h5>
+                    <h6 align="center"><span style="color: #ff0000;"><b>Deadline: <p style="display:inline;" id="demo">
+                            16th May 2023</p></b></span><b></b></h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="5" width="422">
+                    <h2 align="center"><span style="color: #008000;"><b>Application Fee</b></span><b></b></h2>
 
-              <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
+                    <table class="content-table" style="width: 100%;">
+                      <tr>
+                        <th>S No.</th>
+                        <th>Category</th>
+                        <th>Fee</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>General / OBC</td>
+                        <td>₹0</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>OBC NCL </td>
+                        <td>₹0</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>SC / ST</td>
+                        <td>₹0</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="5" width="784">
+                    <h2 align="center"><span style="color: #008000;"><b>Vacancy Details Total : 3808
+                          Post</b></span></span><b></b></h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="110">
+                    <p align="center"><b>Post Name</b></p>
+                  </td>
+                  <td width="170">
+                    <p align="center"><b>Total Post</b></p>
+                  </td>
+                  <td colspan="3" width="504">
+                    <p align="center"><b>UP BC Sakhi Eligibility 2023
+                      </b></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" width="110">
+                    <p align="center">BC Sakhi</p>
+                  </td>
+                  <td colspan="1"  width="170">
+                    <p align="center">3808</p>
+                  </td>
+                  <td colspan="3" width="504">
+                    <ul>
+                      <li>Class 10th High School Exam Passed in Any Recognized Board in India.</li>
+                      <li>Candidates should be a resident of the same Gram Panchayat from where he is going to apply.
+                      </li>
+                      <li>More Details Read the Notification.</li>
+                    </ul>
+                  </td>
+                </tr>
 
-              <h2 class="title">IIT JEE MAINS FORM APPLICATION MARCH 2023</h2>
+<tr>
 
-              <div class="meta-top">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">Utkasrh Dwivedi</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">IIT</a></li>
-                </ul>
-              </div><!-- End meta top -->
+  <!-- <td colspan="5" width="784"> -->
+    
+  <!-- </td> -->
+  <td colspan="5">
 
-              <div class="content">
-                <p>
-                  Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form 
-                </p>
+    <h2 align="center"><span style="color: #008000;"><b>Important Dates</b></span></span><b></b></h2><br>
+<div class="ttimeline">
+  <div class="tcontainer left">
+    <div class="tcontent">
+      <h2>Application Start</h2>
+      <p style="color: #008000;">January 2023 (started)</p>
+    </div>
+  </div>
+  <div class="tcontainer right">
+    <div class="tcontent">
+      <h2>Last Date to Apply Online</h2>
+      <p style="color: red;"><b>05-02-2023</b></p>
+    </div>
+  </div>
+  <div class="tcontainer left">
+    <div class="tcontent">
+      <h2>Last Date complete Form</h2>
+      <p> 05-02-2023</p>
+    </div>
+  </div>
+  <div class="tcontainer right">
+    <div class="tcontent">
+      <h2>Admit Card</h2>
+      <p>Available Soon .</p>
+    </div>
+  </div>
+  <div class="tcontainer left">
+    <div class="tcontent">
+      <h2>Exam Date</h2>
+      <p>Notified Soon</p>
+    </div>
+  </div>
+  
+</div>
 
-                <p>
-                  Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form                 
-                </p>
+  </td>
+</tr>
 
-                <blockquote>
-                  <p>
-                    Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  </p>
-                </blockquote>
+                <tr>
+                  <td colspan="5" width="784">
+                    <h2 align="center"><span style="color: #008000;"><b>How to Fill UP BC Sakhi Recruitment
+                          2023</b></span></h2>
+                    <ul>
+                      <li>UPSRLM BC Sakhi Recruitment 2023. Candidate Can Apply Till<b> 05 February 2023.</b></li>
+                      <li>In Uttar Pradesh BC Sakhi Recruitment 2023, only women whose age is 18 to 50 years can apply
+                        and they should also be a resident of the concerned Gram Panchayat.</li>
+                      <li>Candidate Read the Notification Before Apply the Recruitment Application Form in UPSRLM Apply
+                        Through BC Sakhi App for BC Sakhi Jobs 2023.</li>
+                      <li>Candidates applying for Uttar Pradesh BC Sakhi Recruitment 2023will have to download the BC
+                        Sakhi App from Android Store and apply from the same.</li>
+                      <li>If you apply in more than one Gram Panchayat, all the applications will be rejected.</li>
+                      <li>For More Details Read the Notification</li>
+                    </ul>
+                  </td>
+                </tr>
+                <table class="content-table" style="width: 100%;">
+                  <tr>
+                    <td colspan="5" width="784">
+                      <h2 align="center"><span style="color: #008000;"><b>Important Links</b></span><b></b>
+                      </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Info.</th>
+                    <th>Link</th>
+                  </tr>
+                  <tr>
+                    <td>Apply Through BC Sakhi App</td>
+                    <td><a href="https://play.google.com/store/apps/details?id=com.up.srlm.bcselection"
+                        target="_blank">Click Here</a></td>
+                  </tr>
 
-                <p>
-                  Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form </p>
-
-                <h3>Apply my form Apply my form .</h3>
-                <p>
-                  Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form 
-                </p>
-                <img src="assets/img/jprmbt.gif" class="img-fluid" alt="">
-
-                <h3>Apply my form Apply my form </h3>
-                <p>
-                  Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form </p>
-                <p>
-                  Apply my form Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form Apply my form Apply my form 
-                  Apply my form Apply my form 
-                  Apply my form                 
-                </p>
-
-              </div><!-- End post content -->
-
-              <div class="meta-bottom">
-                <i class="bi bi-folder"></i>
-                <ul class="cats">
-                  <li><a href="#">Exam</a></li>
-                </ul>
-
-                <i class="bi bi-tags"></i>
-                <ul class="tags">
-                  <li><a href="#">IIT JEE</a></li>
-                  <li><a href="#">Mains</a></li>
-                  <li><a href="#">Utkarsh</a></li>
-                </ul>
-              </div><!-- End meta bottom -->
-
-            </article><!-- End blog post -->
-
-            <div class="post-author d-flex align-items-center">
-              <img src="assets/img/blog/blog-author.jpg" class="rounded-circle flex-shrink-0" alt="">
-              <div>
-                <h4>Posted by Utkarsh Dwivedi</h4>
-                <div class="social-links">
-                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
-                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
-                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
-                </div>
-                <p>
-                  Co-founder of ApplyMyForm.
-                </p>
-              </div>
-            </div><!-- End post author -->
-
-            <div class="comments">
-
-
-             
-              <div class="reply-form">
-
-                <h4>Leave a Reply</h4>
-                <p>Your email address will not be published. Required fields are marked * </p>
-                <form action="">
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <input name="website" type="text" class="form-control" placeholder="Your Website">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Post Comment</button>
-
-                </form>
-
-              </div>
-
-            </div><!-- End blog comments -->
-
+                  <tr>
+                    <td>Download Gram Panchayat Wise Vacancy Details</td>
+                    <td><a href="https://www.upsrlm.org/vaccantgp" target="_blank">Click Here</a></td>
+                  </tr>
+                  <tr>
+                    <td>Official Website</td>
+                    <td><a href="https://www.upsrlm.org/" target="_blank">Click Here</a></td>
+                  </tr>
+                  <tr>
+                    <td>Resume/CV Maker</td>
+                    <td><a href="https://applymyform.com/resume/" target="_blank">Click Here</a></td>
+                  </tr>
+                  <tr>
+                    <td>JPG/JPEG/PNG to PDF Converter</td>
+                    <td><a href="#">Click Here</a></td>
+                  </tr>
+                  <tr>
+                    <td>Image size Reducer</td>
+                    <td><a href="#">Click Here</a></td>
+                  </tr>
+                  <tr>
+                    <td>PDF Size Reducer</td>
+                    <td><a href="#">Click Here</a></td>
+                  </tr>
+                  <tr>
+                    <td>All Tools</td>
+                    <td><a href="#">Click Here</a></td>
+                  </tr>
+                </table>
+              </tbody>
+            </table>
           </div>
 
           <div class="col-lg-3">
@@ -308,7 +555,7 @@
                 </form>
               </div><!-- End sidebar search formn-->
 
-              
+
 
               <div class="sidebar-item recent-posts">
                 <h3 class="sidebar-title">Recent Posts</h3>
@@ -382,97 +629,130 @@
 
   </main><!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
 
-      <div class="footer-content">
-        <div class="container">
-          <div class="row">
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-info">
-                <!-- <h3>ApplyMyForm</h3> -->
-                <img style="width: 164px;" src="assets/img/logo.png">
-                <p>Chaubepur, Amethi<br>Uttar Pradesh (227405)<br><br>
-                  <strong>Phone:</strong> +91 880 8800 947<br>
-                  <strong>Email:</strong> hello@applymyform.com<br>
-                </p>
-              </div>
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <!-- <h3>ApplyMyForm</h3> -->
+              <img style="width: 164px;" src="assets/img/logo.png">
+              <p>Chaubepur, Amethi<br>Uttar Pradesh (227405)<br><br>
+                <strong>Phone:</strong> +91 880 8800 947<br>
+                <strong>Email:</strong> hello@applymyform.com<br>
+              </p>
             </div>
-  
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <a href="https://applymyform.com/">Home</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">Brouchers</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">Advertise with Us</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="https://applymyform.com//terms">Terms of service</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="https://applymyform.com/privacy">Privacy policy</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>AMF Tools</h4>
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">JPG to Pdf</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">Pdf Size Reducer</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">JPG Size Reducer</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">Photo & Signature Merger</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">Age Calculator</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 footer-newsletter">
-              <h4>Our Newsletter</h4>
-              <p>We don't spam . We hate too:)</p>
-              <form action="" method="post">
-                <input type="email" placeholder="Enter yor email addrress here...." name="email"><input type="submit"  value="Subscribe">
-              </form>
-  
-            </div>
-  
           </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://applymyform.com/">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Brouchers</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Advertise with Us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://applymyform.com//terms">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://applymyform.com/privacy">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>AMF Tools</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">JPG to Pdf</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Pdf Size Reducer</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">JPG Size Reducer</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Photo & Signature Merger</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Age Calculator</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>We don't spam . We hate too:)</p>
+            <form action="" method="post">
+              <input type="email" placeholder="Enter yor email addrress here...." name="email"><input type="submit"
+                value="Subscribe">
+            </form>
+
+          </div>
+
         </div>
       </div>
-  
-      <div class="footer-legal text-center">
-        <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-  
-          <div class="d-flex flex-column align-items-center align-items-lg-start">
-            <div class="copyright">
-              &copy; Copyright <strong><span>ApplyMyForm</span></strong>. All Rights Reserved
-            </div>
-           
+    </div>
+
+    <div class="footer-legal text-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>ApplyMyForm</span></strong>. All Rights Reserved
           </div>
-  
-          <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-  
+
         </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
       </div>
-  
-    </footer><!-- End Footer -->
-  
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
-    <div id="preloader"></div>
-  
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-  
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-  
-  </body>
-  
-  </html>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Feb 05, 2023 23:59:59").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "days " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Date Over!";
+      }
+    }, 1000);
+
+  </script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
